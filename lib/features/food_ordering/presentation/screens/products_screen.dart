@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../widgets/adds_on_card.dart';
+import '../widgets/red_button.dart';
 
 class ProductPage extends StatelessWidget {
   const ProductPage({super.key});
@@ -88,11 +89,7 @@ class ProductPage extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 20),
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(elevation: 0, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)), primary: const Color(0xFFFF0202), minimumSize: const Size(350, 60)),
-                      child: const Text('Add to Cart', textAlign: TextAlign.center, style: TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'Poppins', fontWeight: FontWeight.w600)),
-                    )
+                    RedButton(text: 'Add to Cart', onPressed: () {}),
                   ],
                 ),
               ),
