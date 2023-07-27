@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_ordering_mobile_app/features/food_ordering/presentation/screens/splash_screen.dart';
 
+import 'features/food_ordering/presentation/screens/products_screen.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: const Color(0xFFFF0202),
       ),
-      home: const SplashScreen(),
+      home: const ProductPage(),
     );
   }
 }
