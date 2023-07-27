@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../widgets/adds_on_card.dart';
+import '../widgets/plus_or_minus.dart';
 import '../widgets/red_button.dart';
 
 class ProductPage extends StatelessWidget {
@@ -55,20 +56,11 @@ class ProductPage extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 20),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text('Beef burger', textAlign: TextAlign.center, style: TextStyle(color: Colors.black, fontSize: 24, fontFamily: 'Poppins', fontWeight: FontWeight.w500)),
-                        Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            SvgPicture.asset('assets/icons/minus.svg'),
-                            const SizedBox(width: 10),
-                            const Text('1', textAlign: TextAlign.center, style: TextStyle(color: Color(0xA0E91414), fontSize: 20, fontFamily: 'Poppins', fontWeight: FontWeight.w400)),
-                            const SizedBox(width: 10),
-                            SvgPicture.asset('assets/icons/plus.svg'),
-                          ],
-                        ),
+                        Text('Beef burger', textAlign: TextAlign.center, style: TextStyle(color: Colors.black, fontSize: 24, fontFamily: 'Poppins', fontWeight: FontWeight.w500)),
+                        MinusOrPlus(),
                       ],
                     ),
                     const SizedBox(height: 20),
