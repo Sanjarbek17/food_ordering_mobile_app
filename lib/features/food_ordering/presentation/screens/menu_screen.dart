@@ -30,11 +30,11 @@ class _MenuScreenState extends State<MenuScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            appBar(width),
+            MyAppBar(width: width),
             const SizedBox(
               height: 5,
             ),
-            Form(child: searchBar()),
+            Form(child: MySearchBar()),
             SizedBox(
               height: height * 0.16,
               child: listView(
@@ -49,7 +49,7 @@ class _MenuScreenState extends State<MenuScreen> {
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400),
               ),
             ),
-            promotions(height),
+            Promotions(height: height),
             const Padding(
               padding: EdgeInsets.only(left: 20, top: 15),
               child: Text(
