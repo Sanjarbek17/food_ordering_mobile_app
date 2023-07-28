@@ -13,8 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Evos',
       theme: ThemeData(
+        fontFamily: 'Poppins',
         primaryColor: const Color(0xFFFF0202),
       ),
       initialRoute: RouteGenerator.splashScreen,
