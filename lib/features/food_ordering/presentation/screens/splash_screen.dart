@@ -7,7 +7,6 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
-    double height = MediaQuery.sizeOf(context).height;
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -20,20 +19,14 @@ class SplashScreen extends StatelessWidget {
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircleAvatar(
-                radius: width * 0.4,
-                backgroundColor: Colors.white,
-                child: Image.asset('assets/images/splash.png')),
+            CircleAvatar(radius: width * 0.4, backgroundColor: Colors.white, child: Image.asset('assets/images/splash.png')),
             Padding(
               padding: const EdgeInsets.only(top: 25, bottom: 40),
               child: SizedBox(
                 width: width * 0.48,
                 child: const Text(
                   ' Enjoy Your Food',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
-                      fontWeight: FontWeight.w600),
+                  style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.w600),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -53,10 +46,7 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(builder: (context) => const MenuScreen()),
-                    (route) => false);
+                Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => const MenuScreen()), (route) => false);
               },
             ),
           ],
