@@ -19,15 +19,7 @@ class SplashScreen extends StatelessWidget {
               padding: const EdgeInsets.only(top: 25, bottom: 40),
               child: SizedBox(
                 width: width * 0.48,
-<<<<<<< HEAD
-                child: const Text(
-                  ' Enjoy Your Food',
-                  style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.w600),
-                  textAlign: TextAlign.center,
-                ),
-=======
                 child: const Text(' Enjoy Your Food', style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.w600), textAlign: TextAlign.center),
->>>>>>> af3fa3a6d2c233344f1307ff71fbcc9349958329
               ),
             ),
             FilledButton(
