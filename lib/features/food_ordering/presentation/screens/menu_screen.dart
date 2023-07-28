@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ordering_mobile_app/routes.dart';
 
 import '../widgets/appBar_home.dart';
 import '../widgets/bottomBar.dart';
@@ -66,9 +67,12 @@ class _MenuScreenState extends State<MenuScreen> {
       height: height * 0.24,
       width: width * 0.40,
       child: Column(children: [
-        SizedBox(
-          height: height * 0.18,
-          child: Image.asset(catalogList[index]['picture']),
+        InkWell(
+          onTap: () => Navigator.pushNamed(context, RouteGenerator.productScreen),
+          child: SizedBox(
+            height: height * 0.18,
+            child: Image.asset(catalogList[index]['picture']),
+          ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
