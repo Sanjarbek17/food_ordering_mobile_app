@@ -28,15 +28,9 @@ class MySearchBar extends StatelessWidget {
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30),
           ),
-<<<<<<< HEAD
-          prefixIcon: const Padding(
-            padding: EdgeInsets.only(left: 10.0),
-            child: Icon(
-=======
           prefixIcon: Padding(
             padding: const EdgeInsets.only(left: 10.0),
             child: const Icon(
->>>>>>> baa70bffe305f1dce50d8f25155cf30236673a22
               Icons.search,
               color: Color(0xFF7C7C7C),
               size: 30,
