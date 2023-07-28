@@ -18,8 +18,9 @@ class MySearchBar extends StatelessWidget {
               width: 2,
             ),
           ),
-          enabledBorder: const OutlineInputBorder(
-            borderSide: BorderSide(
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(30),
+            borderSide: const BorderSide(
               color: Colors.transparent,
               width: 2,
               strokeAlign: BorderSide.strokeAlignInside,
@@ -28,15 +29,9 @@ class MySearchBar extends StatelessWidget {
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30),
           ),
-<<<<<<< HEAD
           prefixIcon: const Padding(
             padding: EdgeInsets.only(left: 10.0),
             child: Icon(
-=======
-          prefixIcon: Padding(
-            padding: const EdgeInsets.only(left: 10.0),
-            child: const Icon(
->>>>>>> baa70bffe305f1dce50d8f25155cf30236673a22
               Icons.search,
               color: Color(0xFF7C7C7C),
               size: 30,
@@ -44,7 +39,7 @@ class MySearchBar extends StatelessWidget {
           ),
           hintText: 'Search',
           hintStyle: const TextStyle(color: Color(0xFF7C7C7C), fontSize: 20, fontWeight: FontWeight.w400)),
-      style: TextStyle(fontSize: 25),
+      style: const TextStyle(fontSize: 25),
       showCursor: false,
     );
   }
