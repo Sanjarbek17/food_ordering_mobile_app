@@ -1,6 +1,10 @@
 # food_ordering_mobile_app
 
-A new Flutter project.
+Food ordering app
+
+## Figma
+
+[Currect Figma](https://www.figma.com/file/iHkbRYJ1bPXGra4PqTHc5s/Food-Ordering-Mobile-app-Design-(Community)?type=design&node-id=0%3A1&mode=design&t=cwYA4RQrk6Kd74Cn-1)
 
 ## Getting Started
 

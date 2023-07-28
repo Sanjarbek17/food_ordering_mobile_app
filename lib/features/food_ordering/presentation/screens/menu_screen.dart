@@ -30,38 +30,27 @@ class _MenuScreenState extends State<MenuScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            appBar(width: width),
+            MyAppBar(width: width),
             const SizedBox(
               height: 5,
             ),
-            Form(child: searchBar()),
+            Form(child: MySearchBar()),
             SizedBox(
               height: height * 0.16,
-              child: listView(
-                height: height,
-                lst: catalogList,
-              ),
+              child: listView(height: height, lst: catalogList),
             ),
             const Padding(
               padding: EdgeInsets.only(left: 20),
-              child: Text(
-                'Promotions',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400),
-              ),
+              child: Text('Promotions', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400)),
             ),
-            promotions(height),
+            Promotions(height: height),
             const Padding(
               padding: EdgeInsets.only(left: 20, top: 15),
-              child: Text(
-                'Popular',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400),
-              ),
+              child: Text('Popular', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400)),
             ),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               popular(height, width, catalogList, 1, 'Beff Burger', '\$30'),
-              const SizedBox(
-                width: 20,
-              ),
+              const SizedBox(width: 20),
               popular(height, width, catalogList, 2, 'Chease pizza', '\$32'),
             ]),
           ],
@@ -89,23 +78,14 @@ class _MenuScreenState extends State<MenuScreen> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    name,
-                    style: const TextStyle(fontWeight: FontWeight.w500),
-                  ),
-                  Text(
-                    cost,
-                    style: const TextStyle(color: Colors.amber),
-                  )
+                  Text(name, style: const TextStyle(fontWeight: FontWeight.w500)),
+                  Text(cost, style: const TextStyle(color: Colors.amber)),
                 ],
               ),
               const CircleAvatar(
                 backgroundColor: Colors.green,
                 radius: 15,
-                child: Icon(
-                  Icons.add,
-                  size: 15,
-                ),
+                child: Icon(Icons.add, size: 15),
               )
             ],
           ),
@@ -118,18 +98,13 @@ class _MenuScreenState extends State<MenuScreen> {
     return BottomNavigationBar(
       currentIndex: currentSelect,
       onTap: (value) {
-        setState(() {
-          currentSelect = value;
-        });
+        setState(() => currentSelect = value);
       },
       type: BottomNavigationBarType.fixed,
       selectedIconTheme: const IconThemeData(color: Colors.red, size: 35),
       unselectedIconTheme: const IconThemeData(color: Colors.grey, size: 35),
       items: const [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home_filled),
-          label: " ",
-        ),
+        BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: " "),
         BottomNavigationBarItem(icon: Icon(Icons.search), label: " "),
         BottomNavigationBarItem(icon: Icon(Icons.shopping_cart_outlined), label: " "),
         BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined), label: " "),

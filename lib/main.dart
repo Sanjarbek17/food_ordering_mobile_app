@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_ordering_mobile_app/features/food_ordering/presentation/screens/splash_screen.dart';
 
+import 'features/food_ordering/presentation/screens/cart_screen.dart';
 void main() {
   runApp(const MyApp());
 }

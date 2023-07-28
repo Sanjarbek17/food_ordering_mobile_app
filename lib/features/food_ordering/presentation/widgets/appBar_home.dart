@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
-class appBar extends StatelessWidget {
+class MyAppBar extends StatelessWidget {
+  const MyAppBar({
+    required this.width,
+    super.key,
+  });
   final double width;
-  const appBar({super.key, required this.width});
 
   @override
   Widget build(BuildContext context) {
