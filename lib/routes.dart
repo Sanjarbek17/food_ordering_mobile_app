@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'features/food_ordering/presentation/screens/screen.dart';
 
-
 class RouteGenerator {
   static const String splashScreen = '/';
   static const String menuScreen = '/menu';
@@ -12,13 +11,13 @@ class RouteGenerator {
   static Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case splashScreen:
-        return MaterialPageRoute(builder: (context) => const SplashScreen());
+        return PageRouteBuilder(pageBuilder: (context, animation, secondaryAnimation) => const SplashScreen(), transitionDuration: Duration.zero);
       case menuScreen:
-        return MaterialPageRoute(builder: (context) => const MenuScreen());
+        return PageRouteBuilder(pageBuilder: (context, animation, secondaryAnimation) => const MenuScreen(), transitionDuration: Duration.zero);
       case productScreen:
-        return MaterialPageRoute(builder: (context) => const ProductPage());
+        return PageRouteBuilder(pageBuilder: (context, animation, secondaryAnimation) => const ProductPage(), transitionDuration: Duration.zero);
       case cartScreen:
-        return MaterialPageRoute(builder: (context) => const CartPage());
+        return PageRouteBuilder(pageBuilder: (context, animation, secondaryAnimation) => const CartPage(), transitionDuration: Duration.zero);
       default:
         throw const FormatException();
     }
