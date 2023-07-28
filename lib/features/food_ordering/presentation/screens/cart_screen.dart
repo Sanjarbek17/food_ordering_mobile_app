@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ordering_mobile_app/features/food_ordering/presentation/widgets/bottomBar.dart';
 import 'package:food_ordering_mobile_app/features/food_ordering/presentation/widgets/price_tag.dart';
 import 'package:food_ordering_mobile_app/features/food_ordering/presentation/widgets/red_button.dart';
 
@@ -21,7 +22,7 @@ class CartPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.6,
+              height: MediaQuery.of(context).size.height * 0.55,
               child: const CustomListTile(imgPath: 'assets/images/beef_burger.png'),
             ),
             const Row(
@@ -41,6 +42,7 @@ class CartPage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: BottomBar(),
     );
   }
 }

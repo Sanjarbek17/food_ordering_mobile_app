@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/appBar_home.dart';
+import '../widgets/bottomBar.dart';
 import '../widgets/catalog_menu.dart';
 import '../widgets/promotions_home.dart';
 import '../widgets/searchbar_home.dart';
@@ -13,7 +14,6 @@ class MenuScreen extends StatefulWidget {
 }
 
 class _MenuScreenState extends State<MenuScreen> {
-  int currentSelect = 0;
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
@@ -56,7 +56,7 @@ class _MenuScreenState extends State<MenuScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: bottomBar(),
+      bottomNavigationBar: BottomBar(),
     );
   }
 
@@ -91,24 +91,6 @@ class _MenuScreenState extends State<MenuScreen> {
           ),
         )
       ]),
-    );
-  }
-
-  BottomNavigationBar bottomBar() {
-    return BottomNavigationBar(
-      currentIndex: currentSelect,
-      onTap: (value) {
-        setState(() => currentSelect = value);
-      },
-      type: BottomNavigationBarType.fixed,
-      selectedIconTheme: const IconThemeData(color: Colors.red, size: 35),
-      unselectedIconTheme: const IconThemeData(color: Colors.grey, size: 35),
-      items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: " "),
-        BottomNavigationBarItem(icon: Icon(Icons.search), label: " "),
-        BottomNavigationBarItem(icon: Icon(Icons.shopping_cart_outlined), label: " "),
-        BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined), label: " "),
-      ],
     );
   }
 }
