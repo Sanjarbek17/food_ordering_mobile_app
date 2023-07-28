@@ -9,12 +9,7 @@ class SplashScreen extends StatelessWidget {
     double width = MediaQuery.sizeOf(context).width;
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-            gradient: LinearGradient(
-          begin: Alignment(13, 12),
-          end: Alignment(15, 12),
-          colors: [Color(0xD8FF0202), Color(0xFFFF0202), Color(0xD8FE1A1A)],
-        )),
+        decoration: const BoxDecoration(gradient: LinearGradient(begin: Alignment(13, 12), end: Alignment(15, 12), colors: [Color(0xD8FF0202), Color(0xFFFF0202), Color(0xD8FE1A1A)])),
         child: Center(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -24,22 +19,21 @@ class SplashScreen extends StatelessWidget {
               padding: const EdgeInsets.only(top: 25, bottom: 40),
               child: SizedBox(
                 width: width * 0.48,
+<<<<<<< HEAD
                 child: const Text(
                   ' Enjoy Your Food',
                   style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.w600),
                   textAlign: TextAlign.center,
                 ),
+=======
+                child: const Text(' Enjoy Your Food', style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.w600), textAlign: TextAlign.center),
+>>>>>>> af3fa3a6d2c233344f1307ff71fbcc9349958329
               ),
             ),
             FilledButton(
-              style: FilledButton.styleFrom(
-                backgroundColor: Colors.white,
-              ),
+              style: FilledButton.styleFrom(backgroundColor: Colors.white),
               child: Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: width * 0.114,
-                  vertical: width * 0.05,
-                ),
+                padding: EdgeInsets.symmetric(horizontal: width * 0.114, vertical: width * 0.05),
                 child: const Text(
                   'GetStarted',
                   style: TextStyle(color: Color(0x99FD3131), fontSize: 20),
