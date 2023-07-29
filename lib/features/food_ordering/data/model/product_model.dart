@@ -21,7 +21,7 @@ class ProductModel extends Product {
       title: json['title'],
       price: json['price'],
       rating: json['rating'],
-      thumbNail: json['thumbNail'],
+      thumbNail: json['thumbnail'],
     );
   }
 
@@ -30,7 +30,7 @@ class ProductModel extends Product {
       'id': id,
       'title': title,
       'price': price,
-      'thumbNail': thumbNail,
+      'thumbnail': thumbNail,
     };
   }
 }
