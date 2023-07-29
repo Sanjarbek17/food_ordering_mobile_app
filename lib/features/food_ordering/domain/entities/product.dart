@@ -1,11 +1,11 @@
-class ProductModel {
+class Product {
   final int id;
   final String title;
   final int price;
   final double rating;
   final String thumbNail;
   
-  ProductModel({
+  Product({
     required this.id,
     required this.title,
     required this.price,
